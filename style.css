@@ -181,6 +181,7 @@ body.dark-mode .courses-list li {
 body.dark-mode .theme-toggle {
     background: linear-gradient(135deg, #333, #555);
 }
+
 /* رسالة "لا يوجد محتوى بعد" */
 .no-content-message {
     text-align: center;
@@ -189,6 +190,7 @@ body.dark-mode .theme-toggle {
     font-weight: bold;
     color: red;
 }
+
 /* تصميم نتائج البحث */
 .search-results {
     position: absolute;
@@ -228,16 +230,73 @@ body:not(.dark-mode) .search-result-item:hover {
     background-color: #f0f0f0;
 }
 
-/* الوضع الليلي */
+/* الوضع الليلي - نتائج البحث */
 body.dark-mode .search-results {
     background-color: #333;
     border-color: #555;
 }
 
 body.dark-mode .search-result-item {
-    color: #e0e0e0;
+    color: red !important; /* لون نتائج البحث أحمر */
 }
 
 body.dark-mode .search-result-item:hover {
     background-color: #555;
+    color: #ff6666 !important;
+}
+
+/* الروابط الفرعية (sublinks) */
+.sublinks-list {
+    list-style-type: none;
+    padding: 0.5rem 1rem;
+    margin-top: 0.2rem;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sublinks-list li {
+    margin-bottom: 0.3rem;
+}
+
+.sublinks-list a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 0.9rem;
+    display: block;
+}
+
+.sublinks-list a:hover {
+    text-decoration: underline;
+}
+
+/* الوضع الليلي - الروابط الفرعية */
+body.dark-mode .sublinks-list {
+    background-color: #444;
+}
+
+body.dark-mode .sublinks-list a {
+    color: red !important;
+}
+
+body.dark-mode .sublinks-list a:hover {
+    color: #ff6666 !important;
+    text-decoration: underline;
+}
+/* لون الروابط داخل نتائج البحث */
+.search-result-item a {
+    color: #007BFF; /* اللون الافتراضي (الأزرق) في الوضع النهاري */
+    text-decoration: none;
+}
+
+/* في الوضع الليلي، نجعل لون الروابط أحمر */
+body.dark-mode .search-result-item a {
+    color: red !important;
+}
+
+/* (اختياري) إضافة تأثير عند المرور */
+body.dark-mode .search-result-item a:hover {
+    color: #ff6666 !important;
+    text-decoration: underline;
 }
